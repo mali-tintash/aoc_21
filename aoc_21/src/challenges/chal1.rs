@@ -1,19 +1,18 @@
-use std::fs;
-use std::io::{self, BufRead};
-use std::path::Path;
+use aoc_21::read_lines;
+
 
 enum FileError
 {
     FileError1
 }
 
-pub fn larger_measurements_count(path: String) -> i32 {
+pub fn larger_measurements_count(path: &str) -> i32 {
     //let f = fs::read_to_string(path).unwrap(); 
     let mut p1 = -1;
     let mut p2 = -1;
     let mut biggerCount = 0;
 
-    if let Ok(lines) = read_lines(path.as_str()){
+    if let Ok(lines) = read_lines(path){
         for line in lines{
             if let Ok(entry) = line {
                 
@@ -31,12 +30,4 @@ pub fn larger_measurements_count(path: String) -> i32 {
     
 
     return biggerCount;
-}
-
-
-fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<fs::File>>>
-where P: AsRef<Path>, {
-
-    let file = fs::File::open(filename)?;
-    Ok(io::BufReader::new(file).lines())
 }
