@@ -1,6 +1,7 @@
 mod challenges;
 
 use challenges::chal1;
+
 use challenges::chal2;
 
 fn main() {

@@ -1,3 +1,4 @@
+
 use aoc_21::read_lines;
 
 
@@ -6,11 +7,13 @@ enum FileError
     FileError1
 }
 
+
 pub fn larger_measurements_count(path: &str) -> i32 {
     //let f = fs::read_to_string(path).unwrap(); 
     let mut p1 = -1;
     let mut p2 = -1;
     let mut biggerCount = 0;
+
 
     if let Ok(lines) = read_lines(path){
         for line in lines{
