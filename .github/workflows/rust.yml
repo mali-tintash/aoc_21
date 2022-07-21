@@ -16,13 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: List directory
-      run: ls
-    - name: change Directory
-      run : cd aoc_21
-    - name: List directory again
-      run: ls
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --manifest-path aoc_21/Cargo.toml --verbose
     - name: Run tests
       run: cargo test --verbose
