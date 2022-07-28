@@ -4,6 +4,7 @@ use challenges::chal1;
 
 use challenges::chal2;
 use challenges::day2;
+use challenges::day3;
 
 fn main() {
     println!("Welcome to AOC 21");
@@ -14,4 +15,6 @@ fn main() {
 
     println!("Day2 (A): {}\n",day2::calculate_pos_depth());
     println!("Day2 (B): {}\n",day2::calculate_pos_depth_aim());
+
+    challenges::day3::calculate_gama_epsilon();
 }
