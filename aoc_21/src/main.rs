@@ -13,4 +13,5 @@ fn main() {
     println!("challenge 2: {}\n", chal2::larger_window_count(path));
 
     println!("Day2 (A): {}\n",day2::calculate_pos_depth());
+    println!("Day2 (B): {}\n",day2::calculate_pos_depth_aim());
 }
